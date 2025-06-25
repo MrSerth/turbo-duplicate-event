@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
+    <script>
+        if (!window.eventListenerInstalled) {
+            window.eventListenerInstalled = true;
+            document.addEventListener("turbolinks:load", function(event) {
+                console.log("turbolinks:load fired on", event.data.url);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Page A</h1>
+    <a href="page_b.html">Go to Page B</a>
+</body>
+</html>

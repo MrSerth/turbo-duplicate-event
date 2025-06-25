@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
+    <script>
+        if (!window.eventListenerInstalled) {
+            window.eventListenerInstalled = true;
+            document.addEventListener("turbolinks:load", function(event) {
+                console.log("turbolinks:load fired on", event.data.url);
+            });
+        }
+    </script>
+    <meta name="turbolinks-visit-control" content="reload">
+</head>
+<body>
+    <h1>Page B</h1>
+    <a href="page_a.html">Go to Page A</a>
+</body>
+</html>
